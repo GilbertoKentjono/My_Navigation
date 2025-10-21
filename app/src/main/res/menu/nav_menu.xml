@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/outline_home_24"
+        android:title="HOME"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/outline_artist_24"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/outline_car_gear_24"
+        android:title="Setting"/>
+
+    <item
+        android:title="Confidential">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/login"
+                    android:title="login"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
