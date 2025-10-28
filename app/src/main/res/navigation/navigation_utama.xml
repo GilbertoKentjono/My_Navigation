@@ -36,4 +36,9 @@
         android:name="nitx.c14230224.mynavigation.SettingFragment"
         android:label="Setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/bahanFragment"
+        android:name="nitx.c14230224.mynavigation.BahanFragment"
+        android:label="fragment_bahan"
+        tools:layout="@layout/fragment_bahan" />
 </navigation>

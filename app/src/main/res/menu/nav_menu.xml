@@ -19,6 +19,11 @@
         android:title="Setting"/>
 
     <item
+        android:id="@+id/nav_bahan"
+        android:title="Bahan"
+        android:icon="@android:drawable/ic_menu_add" />
+
+    <item
         android:title="Confidential">
         <menu>
             <group android:checkableBehavior="single">
