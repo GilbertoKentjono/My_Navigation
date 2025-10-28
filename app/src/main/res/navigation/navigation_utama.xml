@@ -39,6 +39,6 @@
     <fragment
         android:id="@+id/bahanFragment"
         android:name="nitx.c14230224.mynavigation.BahanFragment"
-        android:label="fragment_bahan"
+        android:label="Bahan"
         tools:layout="@layout/fragment_bahan" />
 </navigation>

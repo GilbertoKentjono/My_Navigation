@@ -19,7 +19,7 @@
         android:title="Setting"/>
 
     <item
-        android:id="@+id/nav_bahan"
+        android:id="@+id/bahanFragment"
         android:title="Bahan"
         android:icon="@android:drawable/ic_menu_add" />
 
