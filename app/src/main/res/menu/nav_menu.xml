@@ -24,6 +24,11 @@
         android:icon="@android:drawable/ic_menu_add" />
 
     <item
+        android:id="@+id/cartFragment"
+        android:title="Keranjang"
+        android:icon="@android:drawable/ic_menu_save" />
+
+    <item
         android:title="Confidential">
         <menu>
             <group android:checkableBehavior="single">
@@ -33,6 +38,5 @@
             </group>
         </menu>
     </item>
-
 
 </menu>

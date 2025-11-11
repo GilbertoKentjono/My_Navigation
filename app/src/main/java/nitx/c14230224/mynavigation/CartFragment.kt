@@ -1,59 +1,94 @@
 package nitx.c14230224.mynavigation
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import nitx.c14230224.mynavigation.databinding.FragmentCartBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CartFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CartFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var binding: FragmentCartBinding? = null
+    private lateinit var sp: SharedPreferences
+    private val gson = Gson()
+
+    private val cartList = mutableListOf<Bahan>()
+    private val boughtList = mutableListOf<Bahan>()
+    private lateinit var cartAdapter: CartAdapter
+
+    private val spResep = "resep_data"
+    private val keyCartList = "dt_cart"
+    private val keyBoughtList = "dt_bought"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        binding = FragmentCartBinding.inflate(inflater, container, false)
+        return binding!!.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CartFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CartFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        sp = requireActivity().getSharedPreferences(spResep, Context.MODE_PRIVATE)
+
+        setupRecyclerView()
+        loadDataFromSP()
+    }
+
+    private fun setupRecyclerView() {
+        cartAdapter = CartAdapter(cartList) { bahan, position ->
+            markAsBought(bahan, position)
+        }
+        binding!!.rvCart.layoutManager = LinearLayoutManager(context)
+        binding!!.rvCart.adapter = cartAdapter
+    }
+
+    private fun loadDataFromSP() {
+        val jsonCartList = sp.getString(keyCartList, null)
+        val type = object : TypeToken<MutableList<Bahan>>() {}.type
+        cartList.clear()
+        if (jsonCartList != null) {
+            cartList.addAll(gson.fromJson(jsonCartList, type))
+        }
+        cartAdapter.notifyDataSetChanged()
+
+        val jsonBoughtList = sp.getString(keyBoughtList, null)
+        boughtList.clear()
+        if (jsonBoughtList != null) {
+            boughtList.addAll(gson.fromJson(jsonBoughtList, type))
+        }
+    }
+
+    private fun markAsBought(bahan: Bahan, position: Int) {
+        boughtList.add(bahan)
+        cartList.removeAt(position)
+
+        saveDataToSP()
+
+        cartAdapter.notifyItemRemoved(position)
+        cartAdapter.notifyItemRangeChanged(position, cartList.size)
+
+        Toast.makeText(context, "${bahan.nama} ditandai sudah dibeli", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun saveDataToSP() {
+        val jsonCartBaru = gson.toJson(cartList)
+        sp.edit().putString(keyCartList, jsonCartBaru).apply()
+
+        val jsonBoughtBaru = gson.toJson(boughtList)
+        sp.edit().putString(keyBoughtList, jsonBoughtBaru).apply()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }

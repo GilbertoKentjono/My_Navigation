@@ -15,11 +15,13 @@
             app:argType="string"
             android:defaultValue="-" />
     </fragment>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="nitx.c14230224.mynavigation.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="nitx.c14230224.mynavigation.ProfileFragment"
@@ -31,14 +33,22 @@
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
     </fragment>
+
     <fragment
         android:id="@+id/settingFragment"
         android:name="nitx.c14230224.mynavigation.SettingFragment"
         android:label="Setting"
         tools:layout="@layout/fragment_setting" />
+
     <fragment
         android:id="@+id/bahanFragment"
         android:name="nitx.c14230224.mynavigation.BahanFragment"
         android:label="Bahan"
         tools:layout="@layout/fragment_bahan" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="nitx.c14230224.mynavigation.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+
 </navigation>

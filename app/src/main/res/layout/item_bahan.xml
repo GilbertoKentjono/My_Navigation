@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
     app:cardCornerRadius="4dp"
@@ -28,22 +28,35 @@
             android:id="@+id/tvNamaBahan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Nama Bahan"
+            android:layout_marginStart="12dp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/btnEditKategori"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/btnAddToCart"
+            app:layout_constraintStart_toEndOf="@+id/ivBahan"
+            app:layout_constraintTop_toTopOf="@+id/ivBahan"
+            tools:text="Nama Bahan" />
 
         <TextView
             android:id="@+id/tvKategoriBahan"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Kategori"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamaBahan" />
+            app:layout_constraintEnd_toEndOf="@+id/tvNamaBahan"
+            app:layout_constraintStart_toStartOf="@+id/tvNamaBahan"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaBahan"
+            tools:text="Kategori" />
+
+        <ImageButton
+            android:id="@+id/btnAddToCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditKategori"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@android:color/holo_green_dark" />
 
         <ImageButton
             android:id="@+id/btnEditKategori"
@@ -51,9 +64,9 @@
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnHapus"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:tint="@android:color/holo_blue_dark" />
 
         <ImageButton
@@ -62,9 +75,9 @@
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:tint="@android:color/holo_red_dark" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

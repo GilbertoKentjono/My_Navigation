@@ -1,4 +1,6 @@
 <resources>
+    <string name="app_name">My Navigation</string>
+
     <string-array name="bahan_nama">
         <item>Apel</item>
         <item>Ayam Fillet</item>
@@ -46,6 +48,26 @@
     </string-array>
 
     <string-array name="bahan_gambar_url">
-        <item>https://i.imgur.com/g0j6S1A.png</item> <item>https://i.imgur.com/L1ZZAjW.png</item> <item>https://i.imgur.com/GfW6P3n.png</item> <item>https://i.imgur.com/NfTfK4Z.png</item> <item>https://i.imgur.com/rSjQk7v.png</item> <item>https://i.imgur.com/uVwF9a8.png</item> <item>https://i.imgur.com/7gK2h2S.png</item> <item>https://i.imgur.com/rA1xY2E.png</item> <item>https://i.imgur.com/dK8N2bE.png</item> <item>https://i.imgur.com/vP8A3s2.png</item> <item>https://i.imgur.com/eB3j5fS.png</item> <item>https://i.imgur.com/sC4tM6Y.png</item> <item>https://i.imgur.com/qR8Y8qP.png</item> <item>https://i.imgur.com/7hN8S8U.png</item> <item>https://i.imgur.com/8Q8nZ3b.png</item> <item>https://i.imgur.com/1R2z9N4.png</item> <item>https://i.imgur.com/wP2fK6K.png</item> <item>https://i.imgur.com/wO6yH6q.png</item> <item>https://i.imgur.com/5J3t3tE.png</item> <item>https://i.imgur.com/9nF2tM5.png</item> </string-array>
+        <item>https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/5951887/pexels-photo-5951887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/1760826/pexels-photo-1760826.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/255833/pexels-photo-255833.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/47343/broccoli-vegetables-green-close-up-47343.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/1390460/pexels-photo-1390460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/6517328/pexels-photo-6517328.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/2568018/pexels-photo-2568018.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/1122527/pexels-photo-1122527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/262967/pexels-photo-262967.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/533343/pexels-photo-533343.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/6610531/pexels-photo-6610531.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/33783/olive-oil-olive-cook-kitchen.jpg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/13861/bread-food-healthy-healthy-eating-13861.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/4033324/pexels-photo-4033324.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/162712/egg-stack-block-white-162712.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/9609842/pexels-photo-9609842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+        <item>https://images.pexels.com/photos/1200450/pexels-photo-1200450.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600</item>
+    </string-array>
 
 </resources>
