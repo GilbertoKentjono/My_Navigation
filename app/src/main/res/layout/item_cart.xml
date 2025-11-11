@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
     app:cardCornerRadius="4dp"
@@ -15,9 +15,9 @@
         android:padding="12dp">
 
         <ImageView
-            android:id="@+id/ivBahan"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/ivBahanCart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,47 +25,29 @@
             tools:srcCompat="@android:drawable/ic_menu_gallery" />
 
         <TextView
-            android:id="@+id/tvNamaBahan"
+            android:id="@+id/tvNamaBahanCart"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Nama Bahan"
+            android:layout_marginStart="12dp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/btnEditKategori"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvKategoriBahan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kategori"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNamaBahan" />
-
-        <ImageButton
-            android:id="@+id/btnEditKategori"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@android:drawable/ic_menu_edit"
-            app:layout_constraintEnd_toStartOf="@+id/btnHapus"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:tint="@android:color/holo_blue_dark" />
+            app:layout_constraintEnd_toStartOf="@+id/btnMarkAsBought"
+            app:layout_constraintStart_toEndOf="@+id/ivBahanCart"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nama Bahan" />
 
         <ImageButton
-            android:id="@+id/btnHapus"
+            android:id="@+id/btnMarkAsBought"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@android:drawable/ic_menu_delete"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:tint="@android:color/holo_red_dark" />
+            app:tint="@android:color/holo_green_light" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
